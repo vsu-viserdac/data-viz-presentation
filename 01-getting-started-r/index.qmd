@@ -632,7 +632,6 @@ mutate(data, GDP = gdpPercap * pop)
 :::
 :::::
 
-
 ## `group_by` and `summarise()`
 
 -   Use when you want to aggregate your data (by groups).
