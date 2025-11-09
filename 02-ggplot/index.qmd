@@ -688,11 +688,10 @@ glimpse(babynames)
 ::::
 ::::::
 
-## Geometries
+## Exercise 1
 
 ::::: columns
 ::: {.column width="40%"}
-**Line plots: practice exercise**
 
 -   Recreate the plot shown on the right.
 :::
@@ -792,11 +791,10 @@ geom_point(
 :::
 :::::
 
-## Geometries
+## Exercise 2
 
 ::::: columns
 ::: {.column width="50%"}
-**Scatter plot: practice exercise**
 
 Use the `mpg` data to recreate the plot shown on the right.
 :::
@@ -1639,48 +1637,6 @@ ggplot(mtcars, aes(mpg, wt, color = cyl)) +
 
 ## Scale
 
-**Colorbrewer family**
-
-::::: {.columns style="font-size: 80%;"}
-::: {.column width="50%"}
-Continuous
-
--   scale_color_distiller \| scale_fill_distiller
-
-Binned
-
--   scale_color_fermenter \| scale_fill_fermenter
-
-Discrete
-
--   scale_color_brewer \| scale_fill_brewer
-
-``` r
-# useful parameters
-type = "seq"(sequential, the default), "div"(diverging), "qual"(qualitative)
-direction = 1 (default), -1 (reverse order)
-palette = name of pallete or index
-```
-:::
-
-::: {.column width="50%"}
-```{r}
-#| echo: false
-#| fig-align: center
-#| out-width: 55%
-
-library(RColorBrewer)
-
-par(mar=c(3,4,2,2))
-display.brewer.all(type = "seq" )
-display.brewer.all(type = "div" )
-display.brewer.all(type = "qual" )
-```
-:::
-:::::
-
-## Scale
-
 **`scale_*_manual`**
 
 ::::: columns
@@ -1785,7 +1741,7 @@ For example
 ``` {.r code-line-numbers="3"}
 ggplot(mtcars, aes(x = mpg, y = wt, shape = factor(cyl))) +
   geom_point(size = 4) +
-  scale_shape_manual(values = c(0.3, 0.6, 1))
+  scale_shape_manual(values = c(5, 10, 8))
 ```
 
 ```{r}
@@ -1843,100 +1799,6 @@ ggplot(mtcars, aes(mpg, wt)) + geom_point(size = 3) +
        y = "Weight", #<<
        subtitle = "This would be a subtitle", #<<
        caption = "This is my caption") #<<
-```
-:::
-:::::
-
-## Scales
-
-**Shortcuts**
-
-::::: columns
-::: {.column width="50%"}
-#### Lims
-
--   modify limits of the plot
--   use `xlim` and `ylim`
-
-``` r
-xlim(0,50)
-ylim(NA, 40)
-```
-
--   or `lims` specifying vectors
-
-``` r
-lims(x = c(0, 50))
-lims(y = y(NA, 40))
-```
-:::
-
-::: {.column width="50%"}
-``` {.r code-line-numbers="2"}
-p +
-  xlim(10, 25)
-```
-
-```{r fig.height=3.2, fig.width=6, fig.align='center'}
-#| fig-height: 5
-#| fig-width: 7
-#| fig-align: center
-
-ggplot(mtcars, aes(mpg, wt)) + geom_point(size = 3) + 
-  labs(title = "Title of my plot",
-       x = "Miles per gallon",
-       y = "Weight",
-       subtitle = "This would be a subtitle",
-       caption = "This is my caption") +
-  xlim(10, 25)
-```
-:::
-:::::
-
-## Scale
-
-**Shortcuts**
-
-::::: columns
-::: {.column width="50%"}
-#### Lims
-
--   modify limits of the plot
--   use `xlim` and `ylim`
-
-``` r
-xlim(0,50)
-ylim(NA, 40)
-```
-
--   or `lims` specifying vectors
-
-``` r
-lims(x = c(0, 50))
-lims(y = y(NA, 40))
-```
-:::
-
-::: {.column width="50%"}
-``` {.r code-line-numbers="2, 3"}
-p + 
-  lims(x = c(0, 20),
-       y = c(1, 4))
-```
-
-```{r}
-#| fig-height: 5
-#| fig-width: 7
-#| fig-align: center
-
-ggplot(mtcars, aes(mpg, wt)) + geom_point(size = 3) + 
-  labs(title = "Title of my plot",
-       x = "Miles per gallon",
-       y = "Weight", 
-       subtitle = "This would be a subtitle",
-       caption = "This is my caption") + 
-  lims(x = c(0, 20),
-       y = c(1, 4))
 ```
 :::
 :::::
@@ -2225,9 +2087,7 @@ ggplot(mtcars, aes(x = factor(cyl), fill = factor(vs))) +
 :::
 :::::
 
-## Scales and position adjustments
-
-**Practice exercise**
+## Exercise 4
 
 ::::: columns
 ::: {.column width="50%"}
