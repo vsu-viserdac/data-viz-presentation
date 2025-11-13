@@ -24,8 +24,9 @@ editor: visual
 knitr::opts_chunk$set(comment = "", collapse = TRUE)
 
 ## working directory
-#setwd("D:/Githu-repository/agec211-statistical-methods/agec211-lecture/module1-intro-r")
-setwd("c:\\Users\\chris\\Documents\\Github-repository\\data-viz-presentation-draft-temp\\01-getting-started-r")
+# setwd("D:/Githu-repository/agec211-statistical-methods/agec211-lecture/module1-intro-r")
+#setwd("c:\\Users\\chris\\Documents\\Github-repository\\data-viz-presentation-draft-temp\\01-getting-started-r")
+setwd("c:\\Users\\viser\\OneDrive\\Dokumen\\Github repository\\data-viz-presentation\\01-getting-started-r")
 
 ## libraries
 library(tidyverse)
@@ -396,17 +397,6 @@ Illustration adopted from [Allison Horst](https://github.com/allisonhorst)
 Illustration adopted from [Allison Horst](https://github.com/allisonhorst)
 :::
 
-## 
-
-::: center-text
-**Yehey! Tidy Data for the win!**
-:::
-
-<center><img src="https://www.openscapes.org/img/blog/tidydata/tidydata_6.jpg" style="width: 70%"/></center>
-
-::: {style="font-size:70%; text-align:center;"}
-Illustration adopted from [Allison Horst](https://github.com/allisonhorst)
-:::
 
 ## Data wrangling using `dplyr` {.center-text}
 
@@ -756,7 +746,7 @@ arrange(summarised_data, desc(avg_pop))
 
 ### `%>%` pipe operator {.center-text}
 
-## The`%>%`operator
+## The `%>%` operator
 
 The **`%>%`** helps your write code in a way that is easier to read and understand.
 
@@ -808,7 +798,7 @@ data %>%
 :::
 :::::
 
-## The`%>%`operator
+## The `%>%` operator
 
 What is the average life expectancy of Asian countries per year?
 
